@@ -1,53 +1,147 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@200;400;500&display=swap");
 
 * {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #e8e8e8;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Home */
+.outer-container {
+  background-color: #393e46;
+  width: 15%;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  margin-top: 15em;
+  border-radius: 40px;
+}
+
+.inner-container {
+  background-color: #1b262c;
+  color: white;
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0 10px 0;
+  text-align: center;
+  border-radius: 40px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+  font-size: 1.2em;
+  color: #393e46;
+}
+
+i {
+  cursor: pointer;
+}
+
+.primary-time {
+  font-size: 3em;
+  font-weight: 500;
+}
+
+.secondary-time {
+  font-size: 0.8em;
+  margin: 0;
+  padding: 0;
+}
+
+.date-time {
+  margin-top: 30px;
+  display: block;
+}
+
+.main {
+  height: 80%;
+  width: 100%;
+}
+
+/* Messages */
+.messages {
+  border-radius: 20px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.messages div {
+  padding: 10px 0 10px 15px;
+  cursor: pointer;
+  font-size: 1.1em;
+  letter-spacing: 0.8px;
+}
+
+/* Full Message */
+
+.full-message,
+.messages {
+  background-color: #eeeeee;
+  color: black;
+  height: 100%;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: left;
+}
+
+.full-message {
+  border-radius: 30px;
+  display: none;
+}
+
+.full-message p {
+  padding-top: 20px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5em;
+}
+
+.full-message i {
+  margin-left: 150px;
+}
+/* Music */
+
+/* .music-player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     margin: 0;
     padding: 0;
 }
 
-body {
-    background-color: #e8e8e8;
-    font-family: 'Roboto', sans-serif;
-}
-
-.outer-container {
-    background-color: #393e46;
-    width: 15%;
-    height: 35vh;
+.controls {
     display: flex;
-    align-items: center;
-    margin: auto;
-    margin-top: 15em;
-    border-radius: 40px;
 }
 
-.inner-container {
-    background-color: #1b262c;
-    color: white;
-    height: 70%;
+#play {
+    font-weight: 200;
+    background-color: red;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-    text-align: center;
-    border-radius: 40px;
+    margin: 0;
+    height: 100%;
 }
 
-.buttons {
-    display: flex;
-    justify-content: space-between;
-    width: 60%;
-    font-size: 1.2em;
-    margin-top: 30px;
+.song-info {
+    width: 200%;
 }
 
-.primary-time {
-    font-size: 3em;
-    font-weight: 500;
-}
-
-.secondary-time {
-    font-size: 0.8em;
-}
+progress {
+    width: 90%;
+    margin: 0 4px;
+} */

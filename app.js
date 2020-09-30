@@ -1,36 +1,26 @@
+import {
+    setTime
+} from "./home.js"
+
+import {
+    showMsgList,
+    showMsg
+} from "./message.js"
+
 // script updates the time in smartwatch ui //
-
-
 setTime()
 
 // as the time changes setTime function will be called.
 setInterval(setTime, 60 - new Date().getSeconds())
 
-function setTime() {
-    // will show the current time on smartwatch
-    let date = new Date()
-    let time = `${date.getHours() < 9 ? `0${date.getHours()}`: date.getHours()}:${date.getMinutes() < 9?`0${date.getMinutes()}`:date.getMinutes()}`
-    document.querySelector(".primary-time").innerHTML = time
-    document.querySelector(".secondary-time").innerHTML = time
-    document.querySelector(".day").innerHTML = day(date.getDay())
-}
+// when user clicks on message-icon this function will show the list of messages
+document.querySelector(".fa-comments").addEventListener("click", () => showMsgList())
+
+// when user clicks on any message title the whole mssg will be diplayed
+document.querySelector(".java").addEventListener("click", () => showMsg("java"))
+document.querySelector(".html").addEventListener("click", () => showMsg("html"))
+document.querySelector(".css").addEventListener("click", () => showMsg("css"))
+document.querySelector(".javascript").addEventListener("click", () => showMsg("javascript"))
 
 
-function day(number) {
-    switch (number) {
-        case 0:
-            return "Sunday"
-        case 1:
-            return "Monday"
-        case 2:
-            return "Tuesday"
-        case 3:
-            return "Wednesday"
-        case 4:
-            return "Thrusday"
-        case 5:
-            return "Friday"
-        case 6:
-            return "Saturday"
-    }
-}
+document.querySelector(".full-message i").addEventListener("click", () => showMsgList(false))
