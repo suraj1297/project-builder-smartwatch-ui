@@ -30,7 +30,7 @@ function day(number) {
             return "Thrusday"
         case 5:
             return "Friday"
-        case 7:
+        case 6:
             return "Saturday"
     }
 }
