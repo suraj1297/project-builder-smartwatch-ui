@@ -39,6 +39,89 @@
             <p></p>
             <i class="fa fa-arrow-left" aria-hidden="true"></i>
           </div>
+
+          <!-- music Player -->
+          <div class="music-player">
+            <!-- Top player bar -->
+            <div class="play-controls">
+              <div class="play-pause">
+                <i class="fa fa-play controller" aria-hidden="true"></i>
+              </div>
+              <div class="playlist-control">
+                <p class="titleName">Memories</p>
+                <p class="artist">Maroon 5</p>
+                <div class="forward-backward">
+                  <i
+                    class="fa fa-step-backward previous"
+                    aria-hidden="true"
+                  ></i>
+                  <!-- <progress id="file" max="100" value="0"></progress> -->
+                  <input type="range" max="100" value="0" class="progress" />
+                  <i class="fa fa-step-forward next" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Music list -->
+            <div class="music-list">
+              <div class="music">
+                <p>1</p>
+                <p class="name Maroon-5 one">Memories</p>
+                <p>3:34</p>
+                <audio class="music-Memories">
+                  <source src="music/Memories.mp3" type="audio/mpeg" />
+                </audio>
+              </div>
+              <div class="music">
+                <p>2</p>
+                <p class="name Jeremy two">Comethru</p>
+                <p>3:01</p>
+                <audio class="music-Comethru">
+                  <source src="music/Comethru.mp3" type="audio/mpeg" />
+                </audio>
+              </div>
+              <div class="music">
+                <p>3</p>
+                <p class="name The-Weekend three">Blinding Lights</p>
+                <p>3:20</p>
+                <audio class="music-Blinding-Lights">
+                  <source src="music/BlindingLights.mp3" type="audio/mpeg" />
+                </audio>
+              </div>
+              <div class="music">
+                <p>4</p>
+                <p class="name Adele four">Hello</p>
+                <p>3:26</p>
+                <audio class="music-Hello">
+                  <source src="music/Hello.mp3" type="audio/mpeg" />
+                </audio>
+              </div>
+              <div class="music">
+                <p>5</p>
+                <p class="name Bruno-Mars five">Uptown Funk</p>
+                <p>3:29</p>
+                <audio class="music-Uptown-Funk">
+                  <source src="music/UpTownFunk.mp3" type="audio/mpeg" />
+                </audio>
+              </div>
+              <div class="music">
+                <p>6</p>
+                <p class="name Adele six">Rolling in the deep</p>
+                <p>3:32</p>
+                <audio class="music-Rolling-in-the-deep">
+                  <source src="music/RollingInTheDeep.mp3" type="audio/mpeg" />
+                </audio>
+              </div>
+              <div class="music">
+                <p>7</p>
+                <p class="name Alan-Walker seven">Alone</p>
+                <p>3:11</p>
+                <audio class="music-Alone">
+                  <source src="music/Alone.mp3" type="audio/mpeg" />
+                </audio>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- Buttons -->
@@ -49,6 +132,7 @@
         </div>
       </div>
     </div>
-    <script src="app.js" type="module"></script>
+
+    <script src="script/app.js" type="module"></script>
   </body>
 </html>
