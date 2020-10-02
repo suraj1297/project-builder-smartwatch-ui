@@ -35,8 +35,6 @@ function changeMusic(e) {
     let name = $element.innerText;
     let artist = $element.classList[1]
 
-    console.log($element);
-    console.log(name);
     document.querySelector(".titleName").innerHTML = name
     document.querySelector(".artist").innerHTML = artist.split("-").join(" ")
 
@@ -48,6 +46,8 @@ function changeMusic(e) {
     console.log(currentMusic)
     currentMusicNumber = numberArray.indexOf($element.classList[2])
     document.querySelector(".controller").classList = "fa fa-play controller"
+    console.log(`url("images/${name.split(" ").join("-")}.jpg")`)
+    document.querySelector(".play-pause").style.backgroundImage = `url("images/${name.split(" ").join("-")}.jpg")`
     playPause()
 
 }
@@ -102,7 +102,7 @@ function track(music) {
         }
         lastTime = $progress.value
         $progress.setAttribute("value", `${(music.currentTime*100)/totalTime}`)
-        if ((music.currentTime * 100) / totalTime == 100)
+        if ((music.currentTime * 100) / totalTime == 100 && currentMusicNumber !== 1 && currentMusicNumber !== 7)
             forwardBackward("forward")
     }, 1000)
 }
