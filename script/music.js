@@ -12,7 +12,9 @@ function musicPlayer() {
         document.querySelector(".date-time").style.display = "none"
         document.querySelector(".messages").style.display = "none"
         document.querySelector(".full-message").style.display = "none"
-        document.querySelector(".btn").style.color = "#393e46"
+        document.querySelector(".music-player").style.display = "block"
+        document.querySelector(".fa-comments").style.color = "#393e46"
+        document.querySelector(".fa-clock-o").style.color = "#393e46"
         $icon.style.color = "white"
     } else if ((window.getComputedStyle($icon).color === "rgb(255, 255, 255)")) {
         document.querySelector(".date-time").style.display = "block"
@@ -25,7 +27,7 @@ function musicPlayer() {
         if ($music)
             $music.load()
 
-        clearInterval(id)
+        // clearInterval(id)
     }
 }
 
@@ -93,18 +95,26 @@ function track(music) {
     $progress.value = 0
     let lastTime = 0
 
-    id = setInterval(() => {
+    setInterval(() => {
+        console.log($progress)
+        console.log("progress", $progress.getAttribute("value"))
 
-        let currTime = $progress.value
+        let progressValue = parseInt($progress.value)
+        let currTime = progressValue
         if (Math.abs(lastTime - currTime) > 3) {
-            console.log("progress", $progress.getAttribute("value"))
-            music.currentTime = $progress.value
+            console.log("progress", progressValue)
+            music.currentTime = progressValue
         }
-        lastTime = $progress.value
-        $progress.setAttribute("value", `${(music.currentTime*100)/totalTime}`)
-        if ((music.currentTime * 100) / totalTime == 100 && currentMusicNumber !== 1 && currentMusicNumber !== 7)
+        lastTime = progressValue
+
+        $progress.setAttribute("value", `${Math.ceil((music.currentTime*100)/totalTime)}`)
+        // $progress.value = `${(music.currentTime*100)/totalTime}`
+        console.log($progress)
+
+        if ((music.currentTime * 100) / totalTime == 100 && currentMusicNumber !== 7)
             forwardBackward("forward")
     }, 1000)
+
 }
 
 

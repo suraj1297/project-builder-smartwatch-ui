@@ -120,7 +120,6 @@ i {
 /* Music */
 
 .music-player {
-  color: black;
   height: 100%;
   width: 90%;
   color: white;
@@ -218,11 +217,54 @@ i {
   cursor: pointer;
 }
 
-.music-list::-webkit-scrollbar {
+.music-list::-webkit-scrollbar,
+.timestamp-container::-webkit-scrollbar {
   width: 0.2em;
 }
 
-.music-list::-webkit-scrollbar-thumb {
+.music-list::-webkit-scrollbar-thumb,
+.timestamp-container::-webkit-scrollbar-thumb {
   background-color: darkgrey;
   outline: 1px solid black;
+}
+
+
+/* CountDown Timer */
+.countdown {
+  /* color: black; */
+  height: 100%;
+  width: 90%;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  /* background-color: white; */
+}
+
+.timer {
+  margin-top: 5px;
+  /* width: 100%; */
+}
+
+.timer-icons {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 20px;
+  margin-top: 9px;
+  transform: scale(1.2);
+}
+
+.timestamp-container {
+  height: 60%;
+  background-color: #393e46;
+  margin: 0 10px;
+  border-radius: 10px;
+  overflow-y: scroll;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px 0;
+  border-bottom: 1px solid black;
+  border-radius: 10px;
 }
